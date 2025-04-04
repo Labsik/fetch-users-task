@@ -13,8 +13,8 @@ To get the project running locally:
 
 1. Clone the repository:
 ```
-git clone <repo-url>
-cd <repo-name>
+git clone https://github.com/Labsik/fetch-users-task.git
+cd fetch-users-task
 ```
 
 
