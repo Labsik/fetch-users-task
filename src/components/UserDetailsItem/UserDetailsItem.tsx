@@ -1,4 +1,5 @@
 import { User } from "@interfaces/user";
+import css from "./UserDetailsItem.module.css";
 
 type Props = {
   user: User;
@@ -6,7 +7,7 @@ type Props = {
 
 export const UserDetailsItem = ({ user }: Props) => {
   return (
-    <div>
+    <div className={css.card}>
       <h1>{user.name}</h1>
       <p>
         <strong>Email:</strong> {user.email}

@@ -4,6 +4,7 @@ import { useFetchUsers } from "./hooks/useFetchUsers";
 import { UserItem } from "@components/UserItem/UserItem";
 import { Input } from "@components/ui/Input/Input";
 import { Button } from "@components/ui/Button/Button";
+import css from "./UsersList.module.css";
 
 export const UsersList = () => {
   const [search, setSearch] = useState("");
@@ -20,7 +21,7 @@ export const UsersList = () => {
   };
 
   return (
-    <div>
+    <div className={css.wrapper}>
       <h1>Users</h1>
 
       {loading && <p>Loading...</p>}
@@ -35,7 +36,7 @@ export const UsersList = () => {
         </div>
       )}
 
-      <div>
+      <div className={css.userList}>
         {filteredUsers.map((user) => (
           <UserItem key={user.id} user={user} />
         ))}
